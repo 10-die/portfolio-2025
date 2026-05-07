@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
+import InteractiveHero from '@/components/InteractiveHero';
 import { TestimonialsScene } from '@/components/sections/TestimonialsScene';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
@@ -11,59 +12,8 @@ export default function Home() {
 
   return (
     <main className="w-full overflow-x-hidden bg-black text-white">
-      {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-1/2 w-96 h-96 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full">
-            <span className="text-sm text-zinc-400">Expert Software Engineering</span>
-          </div>
-
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight mb-6 leading-tight">
-            Smooth Motion
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Counts
-            </span>
-          </h1>
-
-          <p className="text-xl sm:text-2xl text-zinc-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Systems designed with clarity. Interactions crafted for delight. Code built with intention. Welcome to thoughtful engineering.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="group px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2">
-              View Work <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 border border-zinc-700 text-white rounded-lg font-semibold hover:bg-zinc-900 transition-colors">
-              Get in Touch
-            </button>
-          </div>
-
-          <div className="flex gap-6 justify-center text-zinc-400">
-            <a href="#" className="hover:text-white transition-colors">
-              <Github size={20} />
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              <Mail size={20} />
-            </a>
-          </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </section>
+      {/* Interactive 3D Hero */}
+      <InteractiveHero />
 
       {/* Capabilities Section */}
       <section className="relative w-full py-24 px-4 bg-gradient-to-b from-black to-zinc-950">
